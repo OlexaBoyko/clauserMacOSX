@@ -26,6 +26,8 @@
 		7E9F5B5A21BC2E4200AACA1A /* ClauseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F5B5921BC2E4200AACA1A /* ClauseCaseProvider.swift */; };
 		7E9F5B5F21BC2FCE00AACA1A /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F5B5D21BC2FCE00AACA1A /* WeakArray.swift */; };
 		7E9F5B6021BC2FCE00AACA1A /* PSPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F5B5E21BC2FCE00AACA1A /* PSPublisher.swift */; };
+		7E9F5B6221BD0B6B00AACA1A /* EditClauseCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F5B6121BD0B6B00AACA1A /* EditClauseCaseViewController.swift */; };
+		7E9F5B6421BD20DF00AACA1A /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F5B6321BD20DF00AACA1A /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		7E9F5B5921BC2E4200AACA1A /* ClauseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClauseCaseProvider.swift; sourceTree = "<group>"; };
 		7E9F5B5D21BC2FCE00AACA1A /* WeakArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		7E9F5B5E21BC2FCE00AACA1A /* PSPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPublisher.swift; sourceTree = "<group>"; };
+		7E9F5B6121BD0B6B00AACA1A /* EditClauseCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClauseCaseViewController.swift; sourceTree = "<group>"; };
+		7E9F5B6321BD20DF00AACA1A /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				7E9F5B3C21BC15FE00AACA1A /* Networking */,
 				7E9F5B3A21BC0FD200AACA1A /* ClauseProvider.swift */,
 				7E9F5B5921BC2E4200AACA1A /* ClauseCaseProvider.swift */,
+				7E9F5B6321BD20DF00AACA1A /* MockData.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				7E9F5B5321BC1BEA00AACA1A /* RootViewController.swift */,
 				7E9F5B3521BC02E300AACA1A /* AddClauseCaseViewController.swift */,
 				7E9F5B5521BC22AD00AACA1A /* AddClauseViewController.swift */,
+				7E9F5B6121BD0B6B00AACA1A /* EditClauseCaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -250,7 +256,9 @@
 				7E9F5B4F21BC15FE00AACA1A /* NetworkingQueueManager.swift in Sources */,
 				7E9F5B5421BC1BEA00AACA1A /* RootViewController.swift in Sources */,
 				7E9F5B5021BC15FE00AACA1A /* RESTRequestExecutor.swift in Sources */,
+				7E9F5B6421BD20DF00AACA1A /* MockData.swift in Sources */,
 				7E9F5B4E21BC15FE00AACA1A /* RESTRequest.swift in Sources */,
+				7E9F5B6221BD0B6B00AACA1A /* EditClauseCaseViewController.swift in Sources */,
 				7E9F5B6021BC2FCE00AACA1A /* PSPublisher.swift in Sources */,
 				7E9F5B5721BC22AD00AACA1A /* AddClauseViewController.swift in Sources */,
 				7E9F5B2621BBEC6B00AACA1A /* SplitViewController.swift in Sources */,
@@ -404,6 +412,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.onestepsoputions.Clauser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -423,6 +432,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.onestepsoputions.Clauser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

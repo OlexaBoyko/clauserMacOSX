@@ -13,17 +13,17 @@ class Clause: Codable {
 	var name: String
 	var info: String
 
-	init() {
-		self.id = 1
-		self.name = "Тестове Положення"
-		self.info = "Це тестове положення"
+	init(id: Int, name: String, info: String) {
+		self.id = id
+		self.name = name
+		self.info = info
 	}
 }
 
 class ClauseProvider {
 	public static var shared = ClauseProvider()
 	private var service = ClauseService()
-	var currentClauses: [Clause] = []
+	private(set) var currentClauses: [Clause] = []
 
 	public func subscribeForUpdates(_ subscriber: PSSubscriber) {
 		PSPublisher.default.subscribe(subscriber: subscriber, messageKey: messageKey)
@@ -34,6 +34,11 @@ class ClauseProvider {
 			self.currentClauses = clauses
 			PSPublisher.default.publish(self)
 		}
+	}
+
+	public func addClause(_ clause: Clause) {
+		currentClauses.append(clause)
+		PSPublisher.default.publish(self)
 	}
 }
 

@@ -15,13 +15,13 @@ class ClauseService {
 
 	func getClauses(completion: (([Clause]) -> Void)?) {
 		DispatchQueue.main.async {
-			completion?([Clause()])
+			completion?(MockData.clauses)
 		}
 	}
 
 	func getClauseCases(completion: (([ClauseCase]) -> Void)?) {
 		DispatchQueue.main.async {
-			completion?([ClauseCase()])
+			completion?(MockData.clauseCases)
 		}
 	}
 

@@ -11,12 +11,14 @@ import Cocoa
 public enum SplitTableValues: String {
 	case addClauseCase = "Додати варіант положення"
 	case addClause = "Додати положення"
+	case editClause = "Змінити варіант положення"
 }
 
 class SplitTableViewController: NSViewController {
 
 	private let tableViewData: [SplitTableValues] = [SplitTableValues.addClauseCase,
-													 SplitTableValues.addClause]
+													 SplitTableValues.addClause,
+													 SplitTableValues.editClause]
 
 	@IBOutlet private weak var tableView: NSTableView!
 	@IBOutlet private weak var scrollView: NSScrollView!

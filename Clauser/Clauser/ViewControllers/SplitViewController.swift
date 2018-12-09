@@ -19,7 +19,7 @@ class SplitViewController: NSSplitViewController {
 
 	override var representedObject: Any? {
 		didSet {
-//			self.present(<#T##viewController: NSViewController##NSViewController#>, animator: <#T##NSViewControllerPresentationAnimator#>)
+			
 		}
 	}
 

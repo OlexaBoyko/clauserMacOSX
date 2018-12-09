@@ -12,23 +12,32 @@ class RootViewController: NSViewController {
 
 	@IBOutlet weak var addClauseCaseContainerView: NSView!
 	@IBOutlet weak var addClauseContainerView: NSView!
-
+	@IBOutlet weak var editClauseContainerView: NSView!
+	
 	public static var shared: RootViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		RootViewController.shared = self
+		hideAll()
     }
 
 	public func show(page: SplitTableValues) {
+		hideAll()
 		switch page {
 		case .addClause:
 			addClauseContainerView.isHidden = false
-			addClauseCaseContainerView.isHidden = true
 		case .addClauseCase:
 			addClauseCaseContainerView.isHidden = false
-			addClauseContainerView.isHidden = true
+		case .editClause:
+			editClauseContainerView.isHidden = false
 		}
+	}
+
+	private func hideAll() {
+		addClauseContainerView.isHidden = true
+		addClauseCaseContainerView.isHidden = true
+		editClauseContainerView.isHidden = true
 	}
 }

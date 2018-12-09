@@ -35,6 +35,10 @@ class AddClauseViewController: NSViewController {
 	@IBAction func addClauseButtonPressed(_ sender: NSButton) {
 		do {
 			try validateData()
+			let clause = Clause.init(id: ClauseProvider.shared.currentClauses.count + 1,
+									 name: clauseName.stringValue,
+									 info: clauseTextView.string)
+			ClauseProvider.shared.addClause(clause)
 			print("success")
 		} catch {
 			showAlert(forError: error)
